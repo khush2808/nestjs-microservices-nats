@@ -25,7 +25,7 @@ services:
     ports:
       - '4222:4222'
   mysql_db:
-    image: mysql:
+    image: mysql
     ports:
       - '3306:3306'
       - '3307:3307'
