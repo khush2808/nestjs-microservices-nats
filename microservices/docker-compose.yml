@@ -21,6 +21,6 @@ services:
       - ./payments-microservice/src:/usr/src/app/src
     command: npm run start:dev
   nats:
-    image: nats:latest
+    image: nats
     ports:
       - '4222:4222'
