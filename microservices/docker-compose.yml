@@ -24,3 +24,17 @@ services:
     image: nats
     ports:
       - '4222:4222'
+  mysql_db:
+    image: mysql:
+    ports:
+      - '3306:3306'
+      - '3307:3307'
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=payments
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    volumes:
+      - ./mysql_db/data:/var/lib/mysql
+    networks:
+      - microservices-network
